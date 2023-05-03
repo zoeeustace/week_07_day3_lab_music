@@ -2,7 +2,9 @@ import React from 'react';
 
 const SongItem = ({song}) => {
     return <li>{song.title.label} <img id="album-img" src={song["im:image"][0].label}/>
-    {/* <button onClick={handleClickPlay} src={song["link"][1].attributes}/> */}
+        <audio controls>
+        <source src={song["link"][1]["attributes"]["href"]} type="audio/mp4"></source>
+    </audio>
     </li>;
 }
  
